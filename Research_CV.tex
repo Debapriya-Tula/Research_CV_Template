@@ -61,6 +61,29 @@
 %        {\end{list}\vspace{-.6\baselineskip}}
 \makeatother
 
+\usepackage{tikz}
+
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1) 
+                --++ (-0, 1.2) 
+                --++ (0.6, 0) 
+                --++ (0, -0.6) 
+                --++ (0.6, 0) 
+                --++ (0, -1);
+            \path[draw, 
+                line width = 0.5, 
+                rounded corners=0.5] 
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
+
 % Layout: Puts the section titles on left side of page
 % \reversemarginpar
 
@@ -228,7 +251,7 @@
         
 % An itemize-style list with medium space between items
 \newenvironment{midlist}[1][\enskip\textbullet]%
-        {\begin{itemize}[#1,leftmargin=*,parsep=0pt,itemsep=2pt,topsep=0pt,partopsep=0pt]}
+        {\begin{itemize}[#1,leftmargin=*,parsep=0pt,itemsep=2pt,topsep=0pt,partopsep=0pt, ]}
         {\end{itemize}}
 
 % An itemize-style list with small space between items
@@ -288,7 +311,7 @@
 
 
 \section{Education}
-\textbf{Indian Institute of Information Technology, Sri City, Andhra Pradesh} \hfill {\textit{2017 - 2021}}\\
+\textbf{Indian Institute of Information Technology, Sri City} \hfill {\textit{2017 - 2021}}\\
 \emph{Bachelor of Technology in Computer Science and Engineering} \hfill{GPA: $\textbf{9.35}/10.0$}
         % Advisors: \href{https://homes.cs.washington.edu/~ali/}{Prof. Ali Farhadi} \& \href{https://homes.cs.washington.edu/~sham/}{Prof. Sham Kakade}\\
 
@@ -296,115 +319,123 @@
 % \emph{B.Tech (Honours) in Computer Science and Engineering with Minor in Electrical Engineering}\\%\hfill{GPA: 8.63/10}
 %         Advisor: \href{http://www.cse.iitb.ac.in/~soumen/}{Prof. Soumen Chakrabarti}
         
-\section{Work Experience}
+\section{Research Experience}
 \textbf{Google Research, India} \hfill {\textit{Aug 2022 - Present}}\\
 \emph{Pre-Doctoral Researcher}\\
-Advisors: \href{https://in.linkedin.com/in/gauagg}{Dr. Gaurav Aggarwal} \& \href{https://research.google/people/107637/}{Dr. Sujoy Paul}
+Advisors: Dr. Gaurav Aggarwal \href{https://web.iitd.ac.in/~brejesh/}{\ExternalLink} \& {Dr. Sujoy Paul} \href{https://research.google/people/107637/}{\ExternalLink}  \\[2.3pt]
+\underline{Test-time adaptation of OCR models.} \hfill {\textit{Under review}} \vspace{1mm}
 \begin{midlist}
-\item Worked on improving test-time adaptation of OCR models for a writer’s handwriting.
-    \begin{innerlist}
-        \item[$\circ$] Adaptation with a \textbf{single} handwriting image.
-        \item[$\circ$] Improved character error rate by \textbf{7-8 \%}.
-    \end{innerlist}
-\item Working on improving understanding of images containing text.
-\end{midlist}
-\vspace{2.5mm}
-        
-\textbf{Tata Consultancy Services - Innovation Lab, India} \hfill {\textit{Aug 2021 - July 2022}}\\
-\emph{Machine Learning Engineer}
-\begin{midlist}
-    \item Develop ML/DL models to \& predict user behavior for services related to General Electric’s Healthcare segment.
-    \item Build and deploy ML models using AutoML toolkits for big datasets (10-20 GB), with modules for statistical data analysis and output explainability.
-\end{midlist}
-\vspace{2.5mm}
+    \item Formulated the novel problem of test-time adaptation of OCR models to a \textbf{single} image of a writer's handwriting.
+    \item Designed a confidence and consistency based self-training method to improve predictions over the single image iteratively.
+    \item Improved character error rate (CER) over benchmark datasets by \textbf{7-8 \%}.
+\end{midlist} \vspace{1.5mm}
 
-\textbf{LimeChat, India} \hfill {\textit{Jan 2021 - June 2021}}\\
-\emph{NLP Software Development Intern}
+\underline{Efficient encoding of images containing text for building efficient vision-language models.}  \hfill {\textit{In progress}} \vspace{1mm}
 \begin{midlist}
-    \item Redesigned the \textbf{order tracking} system to make it more seamless and fault-tolerant.
-    \item Redesigned LimeChat’s \textbf{FAQ management} and \textbf{Utterance management} systems and deployed them as core features in \textbf{5 weeks}.
-    \item Set up the chatbot for \textbf{Nissan}, LimeChat’s biggest client undertaking hitherto.
+    \item Developed a method to embed textual content of an image within the image, for direct processing by vision encoders.
+    \item Experimenting with a variety of vision-language tasks to check the efficacy and adaptability of the proposed method.
 \end{midlist}
 \vspace{2.5mm}
 
 \textbf{IIT Delhi, India} \hfill {\textit{May 2020 - July 2020}}\\
-\emph{Computer Vision Research Intern}
+\emph{Computer Vision Research Intern} \\
+Advisor: Dr. Brejesh Lall \href{https://in.linkedin.com/in/gauagg}{\ExternalLink}
 \begin{midlist}
     \item Designed an efficient pipeline for the problem of motion segmentation of fish in \textbf{underwater scenarios} solved as an \textbf{unsupervised} learning task.
-    \item Replicated a few research papers in the course of exploring the transferability of other models to the problem.
+    \item Modelled underwater disturbances and designed a self-training pipeline for the problem.
+    \item Implemented a few \textbf{video object segmentation} papers to assess their transferability to this challenging setting.
 \end{midlist}
 \vspace{2.5mm}
 
 \textbf{Tezpur University, India} \hfill {\textit{May 2019 - June 2019}}\\
 \emph{Research Intern}
 \begin{midlist}
-    \item Maximize stacking regions to find the most stable secondary structure(s) of RNA using concepts from graph theory.
+    \item Developed an algorithm to maximize stacking regions for estimating the most stable secondary structures for given RNA sequences.
+    \item Designed a dynamic programming based solution and used graph concepts like maximum independent sets and circle graphs to simplify the problem.
     \item Awarded the \textbf{best paper} at \textbf{ICCCIoT, 2020}.
 \end{midlist}
 \vspace{1.0mm}
 
-
-
 \section{Publications}
 \label{sec:pubs}
-\textbf{\large{Preprints}}\hfill
+\textbf{\large{Preprints}}
 \begin{itemize} \itemsep-0.05em
-    \item \href{https://arxiv.org/abs/2308.15037}{\textbf{Is it an i or an l: Test-time Adaptation of Text Line Recognition Models.}}\\
-    \textbf{Debapriya Tula}, Sujoy Paul, Gagan Madan, Peter Garst, Reeve Ingle, Gaurav Aggarwal. \\
+    \item \textbf{Is it an i or an l: Test-time Adaptation of Text Line Recognition Models.} \href{https://arxiv.org/abs/2308.15037}{\ExternalLink}\\
+    \textbf{D Tula}, S Paul, G Madan, P Garst, R Ingle, G Aggarwal. \\
     \emph{Under review, 2023}
     
-    \item \href{https://arxiv.org/abs/2205.05967}{\textbf{Target Aware Network Architecture Search and Compression for Efficient Knowledge Transfer.}}\\
-    Shabbeer Basha, \textbf{Debapriya Tula}, Sravan Kumar Vinakota, Shiv Ram Dubey. \\
+    \item \textbf{Target Aware Network Architecture Search and Compression for Efficient Knowledge Transfer.} \href{https://arxiv.org/abs/2205.05967}{\ExternalLink}\\
+    S Basha, \textbf{D Tula}, S Vinakota, S R Dubey. \\
     \emph{Under review, 2023}.
 \end{itemize}
 
 \textbf{\large{Published}}
 \begin{itemize} \itemsep-0.05em
-    \item \href{https://www.aclweb.org/anthology/2021.dravidianlangtech-1.42}{\textbf{Ensemble of Multilingual Language Models with Pseudo Labeling for offence Detection in Dravidian Languages.}}\\
-    \textbf{Debapriya Tula}, Prathyush Potluri, Shreyas Ms, Sumanth Doddapaneni, Pranjal Sahu, \\Rohan Sukumaran, Parth Patwa.\\
+    \item \textbf{Offense Detection in Dravidian Languages using Code-Mixing Index based Focal Loss and Cosine Normalization} \href{https://link.springer.com/article/10.1007/s42979-022-01190-1}{\ExternalLink}\\
+    \textbf{D Tula}, Shreyas Ms, V Reddy, P Sahu, S Doddapaneni, P Potluri, R Sukumaran, P Patwa.\\
+    \emph{Springer Nature Computer Science, 2022 (Journal)}.
+    
+    \item \textbf{Ensemble of Multilingual Language Models with Pseudo Labeling for Offense Detection in Dravidian Languages.} \href{https://www.aclweb.org/anthology/2021.dravidianlangtech-1.42}{\ExternalLink}\\
+    \textbf{D Tula}, P Potluri, Shreyas Ms, S Doddapaneni, P Sahu, R Sukumaran, P Patwa.\\
     \emph{European Association for Computational Linguistics (\textbf{EACL}), 2021}\\
     \emph{DravidianLangTech workshop, 2021}.
     
-    \item \href{https://doi.org/10.1007/978-981-15-6198-6_15}{\textbf{Estimating RNA Secondary Structure by Maximizing Stacking Regions.}}.\\
-    Piyali Sen, \textbf{Debapriya Tula}, S.K. Ray, S.S. Satapathy \\
+    \item \textbf{Estimating RNA Secondary Structure by Maximizing Stacking Regions.} \href{https://doi.org/10.1007/978-981-15-6198-6_15}{\ExternalLink}\\
+    P Sen, \textbf{D Tula}, S K Ray, S S Satapathy \\
     \emph{International Conference on Computer Communication and Internet of Things (\textbf{ICCCIoT}), 2021} \\
     \faTrophy \textcolor{black}{~\textbf{Best Paper Award}.}
     
-    \item \href{https://link.springer.com/article/10.1007/s42979-022-01190-1}{\textbf{Offense Detection in Dravidian Languages using Code-Mixing Index based Focal Loss and Cosine Normalization}}.\\
-    \textbf{Debapriya Tula}, Shreyas Ms, Viswanatha Reddy, Pranjal Sahu, Sumanth Doddapaneni, \\Prathyush Potluri, Rohan Sukumaran and Parth Patwa.\\
-    \emph{Springer Nature Computer Science, 2022 (Journal)}.
-    
-    \item \href{https://pubmed.ncbi.nlm.nih.gov/35920776/}{\textbf{Incorporation of transition to transversion ratio and nonsense mutations, improves the estimation of the number of synonymous and non-synonymous sites in codons.}}\\
-    Suvendra K Ray, Ruksana Aziz, Piyali Sen, Pratyush Kumar Beura, Saurav Das, \textbf{Debapriya Tula}, \\
-    Madhusmita Dash, Nima Dondu Namsa, Ramesh Chandra Deka, Edward J Feil, Siddhartha Sankar Satapathy.\\
-    \emph{DNA Research, 2022 (Journal)}.
+    % \item \href{https://pubmed.ncbi.nlm.nih.gov/35920776/}{\textbf{Incorporation of transition to transversion ratio and nonsense mutations, improves the estimation of the number of synonymous and non-synonymous sites in codons.}}\\
+    % Suvendra K Ray, Ruksana Aziz, Piyali Sen, Pratyush Kumar Beura, Saurav Das, \textbf{Debapriya Tula}, \\
+    % Madhusmita Dash, Nima Dondu Namsa, Ramesh Chandra Deka, Edward J Feil, Siddhartha Sankar Satapathy.\\
+    % \emph{DNA Research, 2022 (Journal)}.
 
 \end{itemize}
 \vspace{-1.5mm}
 
-\section{Projects}
+\section{Engineering Experience}
+\textbf{Tata Consultancy Services - Innovation Lab, India} \href{https://www.tcs.com/what-we-do/research}{\ExternalLink} \hfill {\textit{Aug 2021 - July 2022}}\\
+\emph{Machine Learning Engineer}
+\begin{midlist}
+    \item Built ML models for forecasting user health policy renewal on data (\textbf{$\sim$ 20 GB}) provided by General Electric HealthCare.
+    \item Developed a framework to process diverse tabular data using AutoML toolkits and deployed it.
+    \item Developed modules for statistical data analysis of the results for user interpretability using Plotly.
+\end{midlist}
+\vspace{2.5mm}
+
+\textbf{LimeChat, India} \href{https://www.limechat.ai/}{\ExternalLink} \hfill {\textit{Jan 2021 - June 2021}}\\
+\emph{NLP Software Development Intern}
+\begin{midlist}
+    \item Redesigned the \textbf{order tracking} system to make it more seamless and fault-tolerant (\textbf{30\%} reduction in user dropoffs).
+    \item Redesigned LimeChat’s \textbf{FAQ} and \textbf{Utterance management} systems and deployed them as core features in \textbf{5 weeks}.
+    \item Designed an end-to-end chatbot for \textbf{Nissan}, LimeChat’s biggest client undertaking hitherto.
+\end{midlist}
+\vspace{2.5mm}
+
+
+\section{Select Projects}
 \vspace{-4mm}
 \label{sec:proj}
 \begin{lonemidlist}
 \item\textbf{Content-Based Image Retrieval} \hfill {\textit{Oct 2020 - May 2021}}
 \begin{itemize}
-    \item Developed a multi-loss model for retrieving relevant images from large datasets.
-    \item Optimized the model using self-attention and an angular-based loss for a \textbf{curriculum-based sampling}.
+    \item Developed a curriculum learning method for retrieving images from large datasets.
+    \item Added a global attention module and an angular-based loss based soft to hard example sampler to help the model learn both simple and complex features. 
 \end{itemize}
-\item\href{https://github.com/Debapriya-Tula/NLP-Project}{\textbf{Speech Emotion Recognition}} \hfill {\textit{Sep 2020 - Dec 2021}}
+\item \textbf{Speech Emotion Recognition} \href{https://github.com/Debapriya-Tula/NLP-Project}{\ExternalLink} \hfill {\textit{Sep 2020 - Dec 2021}}
 \begin{itemize}
      \item Applied augmentation to speech signals, extracted MFCC features and trained a Random Forest Classifier for identifying emotion from speech directly.
      \item Accuracy obtained on datasets: \href{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0196391} {RAVDESS}: \textbf{73.5 \%} \& \href{https://tspace.library.utoronto.ca/handle/1807/24487} {TESS}: \textbf{98.6 \%}.
 \end{itemize}
-\item\href{https://github.com/Debapriya-Tula/Solve-it-in-a-go}{\textbf{Solingo}} \hfill {\textit{Feb 2020 - Apr 2020}}
+% \item\textbf{Solingo} \href{https://github.com/Debapriya-Tula/Solve-it-in-a-go}{\ExternalLink} \hfill {\textit{Feb 2020 - Apr 2020}}
+% \begin{itemize}
+%      \item Developed an app that recognises handwritten math expressions from captured images.
+%      \item Implemented an Densenet-based multiscale attention model for expression recognition, including LaTeX transformation of the input, using \textbf{Pytorch} and \textbf{Selenium}.
+%      \item Accuracy on \href{https://researchdata.edu.au/crohme-competition-recognition-expressions-png/639782}{CROHME} dataset: \textbf{73 \%}.
+% \end{itemize}
+\item\textbf{Speech Dereverberation} \href{https://github.com/Debapriya-Tula/Speech_Dereverberation}{\ExternalLink}\hfill {\textit{Sep 2018 - Dec 2018}}
 \begin{itemize}
-     \item An app that recognises handwritten math expressions from captured images.
-     \item Implemented an attention-based model for expression recognition, including LaTeX transformation of the input, using \textbf{Pytorch} and \textbf{Selenium}.
-     \item Accuracy on \href{https://researchdata.edu.au/crohme-competition-recognition-expressions-png/639782}{CROHME} dataset: \textbf{73 \%}.
-\end{itemize}
-\item\href{https://github.com/Debapriya-Tula/Speech_Dereverberation}{\textbf{Speech Dereverberation}} \hfill {\textit{Sep 2018 - Dec 2018}}
-\begin{itemize}
-     \item Led a team of 4 to build a system to remove reverb(echo) from sound signals by predicting the reverb’s contribution in the present signal, using NumPy and audioread.
+     \item Implemented a weighted prediction error method to estimate reverb in a speech signal.
      \item Similarity with original signal: \textbf{65 - 75 \%}.
 \end{itemize}
 \end{lonemidlist}
@@ -424,21 +455,21 @@ Advisors: \href{https://in.linkedin.com/in/gauagg}{Dr. Gaurav Aggarwal} \& \href
 \section{Talks}
 \vspace{-4mm}
 \begin{lonemidlist}
-\item\href{https://docs.google.com/presentation/d/1B4fY_jALCVDi2TN13jeHtQngEngYqBdBN9k7VFwzvgE/edit#slide=id.p}{\textbf{Deep Learning - Then, Now and Beyond}}
+\item \textbf{Deep Learning - Then, Now and Beyond} \href{https://docs.google.com/presentation/d/1B4fY_jALCVDi2TN13jeHtQngEngYqBdBN9k7VFwzvgE/edit#slide=id.p}{\ExternalLink}
 \begin{itemize}
     \item Central University of Odisha, India \hfill{\textit{Apr 2023}}
 \end{itemize}
 \end{lonemidlist}
 
 
-\section{Professional Responsibilities}
+\section{Academic Service and Volunteering}
 \vspace{-4mm}
 \begin{lonemidlist}
 
 \item \textit{AI Student Ambassador} - Intel \hfill {\textit{Oct 2019 - June 2021}}
   \begin{itemize}
-        \item Organize hands-on sessions and paper reading sessions on topics related to AI/ML. Encourage students to work on AI/ML projects and assist them.
-        \item Designed an interpolation method that reduces the frame rate in videos followed by frame reconstruction for efficient (internet) data usage. Average interpolation error on \href{https://github.com/Debapriya-Tula/AdaConv-Pytorch}{Visual Tracker Benchmark(VTB)} dataset - \textbf{12.6 \%}.
+        \item Organized 1 hr long hands-on sessions and paper reading sessions on topics related to AI/ML. Encouraged students to work on AI/ML projects and assisted them.
+        \item Implemented a video frame interpolation method using adaptive separable convolutions for efficient internet data usage. Average interpolation error on \href{https://github.com/Debapriya-Tula/AdaConv-Pytorch}{Visual Tracker Benchmark(VTB)} dataset - \textbf{12.6 \%}.
   \end{itemize}
 \item \textit{Undergraduate Teaching Assistantship} - Computer Science and Engineering, IIIT Sri City
   \begin{itemize}
@@ -448,17 +479,21 @@ Advisors: \href{https://in.linkedin.com/in/gauagg}{Dr. Gaurav Aggarwal} \& \href
 \end{lonemidlist}
 \vspace{1.0mm}
 
-\section{Skills and Tools}
-\textbf{Deep Learning}, \textbf{Computer Vision}, Natural Language Processing, Data Science, \textbf{Python}, MATLAB, Javascript, \textbf{Git}, SQL, NoSQL, \textbf{Bash}, Rasa, \textbf{Tensorflow}, \textbf{Pytorch}, \textbf{Keras}, \textbf{JAX}, FastAI, Sklearn, \textbf{Numpy}, \textbf{Pandas}, Seaborn, LaTeX
+\section{Relevant Coursework}
+Discrete Mathematics, \textbf{Linear Algebra}, Probability Theory and Complex Analysis, Statistical Data Analysis, Advanced Statistical Methods, Theory of Computation, \textbf{Artificial Intelligence}, Digital Image Processing, Computer Graphics and Multimedia, \textbf{Deep Learning}, \textbf{Computer Vision}, Natural Language Processing
 \vspace{1.0mm}
 
-\section{Other Details}
-\vspace{-4mm}
-\begin{lonemidlist}
+\section{Languages and Tools}
+\textbf{Python}, MATLAB, Javascript, \textbf{Git}, SQL, NoSQL, \textbf{Bash}, Rasa, \textbf{Tensorflow}, \textbf{Pytorch}, \textbf{Keras}, \textbf{JAX}, FastAI, Sklearn, \textbf{Numpy}, \textbf{Pandas}, Seaborn, LaTeX
+\vspace{1.0mm}
 
-\item \textbf{Language Proficiency:} English, Hindi, Odia, Assamese.
-\item \textbf{Hobbies:} Reading books, playing the guitar, singing, playing table tennis and badminton.
-\end{lonemidlist}
+% \section{Other Details}
+% \vspace{-4mm}
+% \begin{lonemidlist}
+
+% \item \textbf{Language Proficiency:} English, Hindi, Odia, Assamese.
+% \item \textbf{Hobbies:} Reading books, playing the guitar, singing, playing table tennis and badminton.
+% \end{lonemidlist}
 
 \end{document}
 
