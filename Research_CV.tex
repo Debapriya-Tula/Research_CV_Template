@@ -251,7 +251,7 @@
         
 % An itemize-style list with medium space between items
 \newenvironment{midlist}[1][\enskip\textbullet]%
-        {\begin{itemize}[#1,leftmargin=*,parsep=0pt,itemsep=2pt,topsep=0pt,partopsep=0pt, ]}
+        {\begin{itemize}[#1,leftmargin=*,parsep=0pt,itemsep=1.9pt,topsep=0pt,partopsep=0pt, ]}
         {\end{itemize}}
 
 % An itemize-style list with small space between items
@@ -303,7 +303,7 @@
 \begin{center}\textbf{Debapriya Tula}\end{center}
 \end{LARGE}
 \smallskip 
-\faEnvelope~\email{debapriyatula@google.com} \hfill
+\faEnvelope~\email{dtula@g.ucla.edu} \hfill
 \faHome~\href{\homepage}{debapriya-tula.github.io} \hfill
 \faLinkedin~\href{http://linkedin.com/in/debapriya-tula}{LinkedIn} \hfill
 \faGraduationCap~\href{https://scholar.google.com/citations?view_op=list_works&hl=en&authuser=3&user=4lJhtPYAAAAJ}{Google Scholar} \hfill
@@ -311,6 +311,8 @@
 
 
 \section{Education}
+\textbf{University of California, Los Angeles} \hfill {\textit{2024 - 2026}}\\
+\vspace{1mm}\emph{Masters in Electrical and Computer Engineering}\\
 \textbf{Indian Institute of Information Technology, Sri City} \hfill {\textit{2017 - 2021}}\\
 \emph{Bachelor of Technology in Computer Science and Engineering} \hfill{GPA: $\textbf{9.35}/10.0$}
         % Advisors: \href{https://homes.cs.washington.edu/~ali/}{Prof. Ali Farhadi} \& \href{https://homes.cs.washington.edu/~sham/}{Prof. Sham Kakade}\\
@@ -318,71 +320,119 @@
 % \textbf{Indian Institute of Technology Bombay} \hfill {\textit{2013 - 2017}}\\
 % \emph{B.Tech (Honours) in Computer Science and Engineering with Minor in Electrical Engineering}\\%\hfill{GPA: 8.63/10}
 %         Advisor: \href{http://www.cse.iitb.ac.in/~soumen/}{Prof. Soumen Chakrabarti}
-        
+
+\vspace{-1.0mm}
 \section{Research Experience}
-\textbf{Google Research, India} \hfill {\textit{Aug 2022 - Present}}\\
+\textbf{Google Deepmind, India} \hfill {\textit{Aug 2022 - Aug 2024}}\\
 \emph{Pre-Doctoral Researcher}\\
-Advisors: Dr. Gaurav Aggarwal \href{https://web.iitd.ac.in/~brejesh/}{\ExternalLink} \& {Dr. Sujoy Paul} \href{https://research.google/people/107637/}{\ExternalLink}  \\[2.3pt]
-\underline{Test-time adaptation of OCR models.} \hfill {\textit{Under review}} \vspace{1mm}
+Advisors: Dr. Prateek Jain \href{https://www.prateekjain.org/}{\ExternalLink} \& {Dr. Sujoy Paul} \href{https://research.google/people/107637/}{\ExternalLink}  \\[2.3pt]
+\underline{Test-time adaptation of OCR models.} \vspace{1mm}
 \begin{midlist}
     \item Formulated the novel problem of test-time adaptation of OCR models to a \textbf{single} image of a writer's handwriting.
     \item Designed a confidence and consistency based self-training method to improve predictions over the single image iteratively.
-    \item Improved character error rate (CER) over benchmark datasets by \textbf{7-8 \%}.
+    \item Improved CER over \textbf{0.4} \% across \textbf{250+} internal datasets. 
 \end{midlist} \vspace{1.5mm}
 
-\underline{Efficient encoding of images containing text for building efficient vision-language models.}  \hfill {\textit{In progress}} \vspace{1mm}
+\underline{Streamlined encoding of text-embedded images for efficient vision-language models.} \vspace{1mm}
 \begin{midlist}
     \item Developed a method to embed textual content of an image within the image, for direct processing by vision encoders.
-    \item Experimenting with a variety of vision-language tasks to check the efficacy and adaptability of the proposed method.
+    \item Achieved \textbf{twofold} improvement in exact match scores compared to baseline method without embedded textual content.
+    % \item Experimenting with a variety of vision-language tasks to check the efficacy and adaptability of the proposed method.
 \end{midlist}
-\vspace{2.5mm}
+\vspace{1.5mm}
+
+\underline{Efficiency in video and image generation} \vspace{1mm}
+\begin{midlist}
+    \item Implemented Matryoshka learning with distillation for transformer layers, to decrease inference latency.
+    \item Performed exhaustive ablations of Matryoshka over transformer layers.
+\end{midlist}
+\vspace{2.0mm}
+
 
 \textbf{IIT Delhi, India} \hfill {\textit{May 2020 - July 2020}}\\
 \emph{Computer Vision Research Intern} \\
 Advisor: Dr. Brejesh Lall \href{https://in.linkedin.com/in/gauagg}{\ExternalLink}
 \begin{midlist}
     \item Designed an efficient pipeline for the problem of motion segmentation of fish in \textbf{underwater scenarios} solved as an \textbf{unsupervised} learning task.
-    \item Modelled underwater disturbances and designed a self-training pipeline for the problem.
-    \item Implemented a few \textbf{video object segmentation} papers to assess their transferability to this challenging setting.
+    \item Modelled underwater disturbances and designed a temporal autoencoder based pipeline for the problem.
+    \item Implemented over 4 \textbf{video object segmentation} papers to assess their transferability to this challenging setting.
 \end{midlist}
-\vspace{2.5mm}
+\vspace{2.0mm}
 
 \textbf{Tezpur University, India} \hfill {\textit{May 2019 - June 2019}}\\
-\emph{Research Intern}
+\emph{Research Intern} \\
+Advisor: Dr. Siddhartha S. Satapathy \href{https://tezu.irins.org/profile/48195}{\ExternalLink}
 \begin{midlist}
-    \item Developed an algorithm to maximize stacking regions for estimating the most stable secondary structures for given RNA sequences.
+    \item Developed an algorithm for maximizing stacking regions to estimate most stable secondary structures for RNA sequences.
     \item Designed a dynamic programming based solution and used graph concepts like maximum independent sets and circle graphs to simplify the problem.
     \item Awarded the \textbf{best paper} at \textbf{ICCCIoT, 2020}.
 \end{midlist}
-\vspace{1.0mm}
+% \vspace{-mm}
+
+% \section{Publications}
+% \label{sec:pubs}
+% \textbf{\large{Preprints}}
+% % \vspace{-\topsep}
+% \begin{itemize} [topsep=2pt] \itemsep-0.07em
+%     \item \textbf{Is it an i or an l: Test-time Adaptation of Text Line Recognition Models.} \href{https://arxiv.org/abs/2308.15037}{\ExternalLink}\\
+%     \textbf{D Tula}, S Paul, G Madan, P Garst, R Ingle, G Aggarwal. \\
+%     \emph{Under review, 2023}
+% \end{itemize}
+
+% \textbf{\large{Published}}
+% % \vspace{-\topsep}
+% \begin{itemize} [topsep=2pt] \itemsep-0.07em
+%     \item \textbf{Target Aware Network Architecture Search and Compression for Efficient Knowledge Transfer.} \href{https://arxiv.org/abs/2205.05967}{\ExternalLink}\\
+%     S Basha, \textbf{D Tula}, S Vinakota, S R Dubey. \\
+%     \emph{Multimedia Systems, 2024 (Journal)}.
+    
+%     \item \textbf{Offense Detection in Dravidian Languages using Code-Mixing Index based Focal Loss and Cosine Normalization.} \href{https://link.springer.com/article/10.1007/s42979-022-01190-1}{\ExternalLink}\\
+%     \textbf{D Tula}, Shreyas Ms, V Reddy, P Sahu, S Doddapaneni, P Potluri, R Sukumaran, P Patwa.\\
+%     \emph{Springer Nature Computer Science, 2022 (Journal)}.
+    
+%     \item \textbf{Ensemble of Multilingual Language Models with Pseudo Labeling for Offense Detection in Dravidian Languages.} \href{https://www.aclweb.org/anthology/2021.dravidianlangtech-1.42}{\ExternalLink}\\
+%     \textbf{D Tula}, P Potluri, Shreyas Ms, S Doddapaneni, P Sahu, R Sukumaran, P Patwa.\\
+%     \emph{European Association for Computational Linguistics (\textbf{EACL}), 2021}\\
+%     \emph{DravidianLangTech workshop, 2021}.
+    
+%     \item \textbf{Estimating RNA Secondary Structure by Maximizing Stacking Regions.} \href{https://doi.org/10.1007/978-981-15-6198-6_15}{\ExternalLink}\\
+%     P Sen, \textbf{D Tula}, S K Ray, S S Satapathy. \\
+%     \emph{International Conference on Computer Communication and Internet of Things (\textbf{ICCCIoT}), 2021.} \\
+%     \faTrophy \textcolor{black}{~\textbf{Best Paper Award}.}
+    
+%     % \item \href{https://pubmed.ncbi.nlm.nih.gov/35920776/}{\textbf{Incorporation of transition to transversion ratio and nonsense mutations, improves the estimation of the number of synonymous and non-synonymous sites in codons.}}\\
+%     % Suvendra K Ray, Ruksana Aziz, Piyali Sen, Pratyush Kumar Beura, Saurav Das, \textbf{Debapriya Tula}, \\
+%     % Madhusmita Dash, Nima Dondu Namsa, Ramesh Chandra Deka, Edward J Feil, Siddhartha Sankar Satapathy.\\
+%     % \emph{DNA Research, 2022 (Journal)}.
+
+% \end{itemize}
+% \vspace{-1.5mm}
+
 
 \section{Publications}
 \label{sec:pubs}
-\textbf{\large{Preprints}}
-\begin{itemize} \itemsep-0.05em
-    \item \textbf{Is it an i or an l: Test-time Adaptation of Text Line Recognition Models.} \href{https://arxiv.org/abs/2308.15037}{\ExternalLink}\\
-    \textbf{D Tula}, S Paul, G Madan, P Garst, R Ingle, G Aggarwal. \\
-    \emph{Under review, 2023}
-    
+\vspace{-\baselineskip}
+\vspace{-1.0mm}
+\begin{itemize} [topsep=1.5pt] \itemsep-0.09em
     \item \textbf{Target Aware Network Architecture Search and Compression for Efficient Knowledge Transfer.} \href{https://arxiv.org/abs/2205.05967}{\ExternalLink}\\
     S Basha, \textbf{D Tula}, S Vinakota, S R Dubey. \\
-    \emph{Under review, 2023}.
-\end{itemize}
+    \emph{Multimedia Systems, 2024 (Journal)}.
 
-\textbf{\large{Published}}
-\begin{itemize} \itemsep-0.05em
-    \item \textbf{Offense Detection in Dravidian Languages using Code-Mixing Index based Focal Loss and Cosine Normalization} \href{https://link.springer.com/article/10.1007/s42979-022-01190-1}{\ExternalLink}\\
+    \item \textbf{Is it an i or an l: Test-time Adaptation of Text Line Recognition Models.} \href{https://arxiv.org/abs/2308.15037}{\ExternalLink}\\
+    \textbf{D Tula}, S Paul, G Madan, P Garst, R Ingle, G Aggarwal. \\
+    \emph{Ongoing submission towards TMLR}
+    
+    \item \textbf{Offense Detection in Dravidian Languages using Code-Mixing Index based Focal Loss and Cosine Normalization.} \href{https://link.springer.com/article/10.1007/s42979-022-01190-1}{\ExternalLink}\\
     \textbf{D Tula}, Shreyas Ms, V Reddy, P Sahu, S Doddapaneni, P Potluri, R Sukumaran, P Patwa.\\
     \emph{Springer Nature Computer Science, 2022 (Journal)}.
     
     \item \textbf{Ensemble of Multilingual Language Models with Pseudo Labeling for Offense Detection in Dravidian Languages.} \href{https://www.aclweb.org/anthology/2021.dravidianlangtech-1.42}{\ExternalLink}\\
     \textbf{D Tula}, P Potluri, Shreyas Ms, S Doddapaneni, P Sahu, R Sukumaran, P Patwa.\\
-    \emph{European Association for Computational Linguistics (\textbf{EACL}), 2021}\\
-    \emph{DravidianLangTech workshop, 2021}.
+    \emph{DravidianLangTech @ European Association for Computational Linguistics (\textbf{EACL}), 2021}
     
     \item \textbf{Estimating RNA Secondary Structure by Maximizing Stacking Regions.} \href{https://doi.org/10.1007/978-981-15-6198-6_15}{\ExternalLink}\\
-    P Sen, \textbf{D Tula}, S K Ray, S S Satapathy \\
-    \emph{International Conference on Computer Communication and Internet of Things (\textbf{ICCCIoT}), 2021} \\
+    P Sen, \textbf{D Tula}, S K Ray, S S Satapathy. \\
+    \emph{International Conference on Computer Communication and Internet of Things (\textbf{ICCCIoT}), 2021.} \\
     \faTrophy \textcolor{black}{~\textbf{Best Paper Award}.}
     
     % \item \href{https://pubmed.ncbi.nlm.nih.gov/35920776/}{\textbf{Incorporation of transition to transversion ratio and nonsense mutations, improves the estimation of the number of synonymous and non-synonymous sites in codons.}}\\
@@ -422,7 +472,7 @@ Advisor: Dr. Brejesh Lall \href{https://in.linkedin.com/in/gauagg}{\ExternalLink
     \item Developed a curriculum learning method for retrieving images from large datasets.
     \item Added a global attention module and an angular-based loss based soft to hard example sampler to help the model learn both simple and complex features. 
 \end{itemize}
-\item \textbf{Speech Emotion Recognition} \href{https://github.com/Debapriya-Tula/NLP-Project}{\ExternalLink} \hfill {\textit{Sep 2020 - Dec 2021}}
+\item \textbf{Speech Emotion Recognition} \href{https://github.com/Debapriya-Tula/NLP-Project}{\ExternalLink} \hfill {\textit{Sep 2020 - Dec 2020}}
 \begin{itemize}
      \item Applied augmentation to speech signals, extracted MFCC features and trained a Random Forest Classifier for identifying emotion from speech directly.
      \item Accuracy obtained on datasets: \href{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0196391} {RAVDESS}: \textbf{73.5 \%} \& \href{https://tspace.library.utoronto.ca/handle/1807/24487} {TESS}: \textbf{98.6 \%}.
@@ -435,7 +485,7 @@ Advisor: Dr. Brejesh Lall \href{https://in.linkedin.com/in/gauagg}{\ExternalLink
 % \end{itemize}
 \item\textbf{Speech Dereverberation} \href{https://github.com/Debapriya-Tula/Speech_Dereverberation}{\ExternalLink}\hfill {\textit{Sep 2018 - Dec 2018}}
 \begin{itemize}
-     \item Implemented a weighted prediction error method to estimate reverb in a speech signal.
+     \item Implemented a statistical weighted prediction error model with a Gaussian prior over the reverb in a speech signal.
      \item Similarity with original signal: \textbf{65 - 75 \%}.
 \end{itemize}
 \end{lonemidlist}
@@ -444,11 +494,12 @@ Advisor: Dr. Brejesh Lall \href{https://in.linkedin.com/in/gauagg}{\ExternalLink
 
 \section{Awards and Honors}
 \vspace{-4mm}
-\begin{midlist}
+\begin{smallmidlist}
+\item \textbf{Dept Rank 5} among \textbf{160} students - Computer Science and Engineering, IIIT Sri City.
 \item \textbf{Best Paper Award} at \href{https://link.springer.com/book/10.1007/978-981-15-6198-6}{ICCCIoT}, 2020.
-\item \href{https://online-inspire.gov.in/}{\textbf{INSPIRE}} Award for my science project in 2013. 
-\item \textbf{State rank 11} in \href{https://www.unifiedcouncil.com/about-nstse-online.html}{\textbf{NSTSE}} exam in 2012.
-\end{midlist}
+\item Awarded Innovation in Science Pursuit for Inspired Research (\href{https://online-inspire.gov.in/}{\textbf{INSPIRE}}) in 2013. 
+\item \textbf{State rank 11} in National Science Talent Search Exam (\href{https://www.unifiedcouncil.com/about-nstse-online.html}{\textbf{NSTSE}}) in 2012.
+\end{smallmidlist}
 \vspace{1.0mm}
 
 
@@ -466,7 +517,9 @@ Advisor: Dr. Brejesh Lall \href{https://in.linkedin.com/in/gauagg}{\ExternalLink
 \vspace{-4mm}
 \begin{lonemidlist}
 
-\item \textit{AI Student Ambassador} - Intel \hfill {\textit{Oct 2019 - June 2021}}
+\item \textit{Volunteer at Google Booth} - \textbf{ICCV, 2023}.
+\item \textit{Reviewer} - \textbf{ICVGIP, 2024}; Workshops at \textbf{EACL 2021}, \textbf{NeurIPS 2022}, \textbf{ICCV 2023}.
+\item \textit{AI Student Ambassador} - \textbf{Intel} \hfill {\textit{Oct 2019 - June 2021}}
   \begin{itemize}
         \item Organized 1 hr long hands-on sessions and paper reading sessions on topics related to AI/ML. Encouraged students to work on AI/ML projects and assisted them.
         \item Implemented a video frame interpolation method using adaptive separable convolutions for efficient internet data usage. Average interpolation error on \href{https://github.com/Debapriya-Tula/AdaConv-Pytorch}{Visual Tracker Benchmark(VTB)} dataset - \textbf{12.6 \%}.
@@ -480,7 +533,8 @@ Advisor: Dr. Brejesh Lall \href{https://in.linkedin.com/in/gauagg}{\ExternalLink
 \vspace{1.0mm}
 
 \section{Relevant Coursework}
-Discrete Mathematics, \textbf{Linear Algebra}, Probability Theory and Complex Analysis, Statistical Data Analysis, Advanced Statistical Methods, Theory of Computation, \textbf{Artificial Intelligence}, Digital Image Processing, Computer Graphics and Multimedia, \textbf{Deep Learning}, \textbf{Computer Vision}, Natural Language Processing
+\textbf{Math} - Discrete Mathematics, \textit{Linear Algebra}, Probability Theory, Statistical Data Analysis, Advanced Statistical Methods \\
+\textbf{Computer Science} - Theory of Computation, \textit{Artificial Intelligence}, Digital Image Processing, Computer Graphics and Multimedia, \textit{Deep Learning}, \textit{Computer Vision}, Natural Language Processing
 \vspace{1.0mm}
 
 \section{Languages and Tools}
